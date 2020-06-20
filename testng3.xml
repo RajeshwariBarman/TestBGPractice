@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" >
+	<parameter name="testdata" value="suite" />
+	<parameter name="testdata1" value="suite1" />
+	<test thread-count="5" name="Test" parallel = "tests">
+		<parameter name="testdata" value="test" />
+		<parameter name="testdata1" value="test1" />
+		<classes >
+			<class name="Framework.TestParms">
+				<parameter name="testdata" value="classes" />
+				<parameter name="testdata1" value="123" />
+				<methods>
+					<include name="add" />
+					<parameter name="testdata" value="method" />
+					<include name="add1" />
+					<parameter name="testdata1" value="method1" />
+				</methods>
+			</class>
+			<class name="Framework.TestParam2">
+				<parameter name="testdata" value="classes" />
+				<parameter name="testdata1" value="param2class" />
+				<methods>
+					<include name="add1" />
+					<parameter name="testdata1" value="param2method" />
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
