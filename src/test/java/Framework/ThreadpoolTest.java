@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 public class ThreadpoolTest {
 	
-	int var = 30;
+	int var = 10;
 	@Test()
 	private void test1()
 	{
